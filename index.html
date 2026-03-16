@@ -6,7 +6,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="theme-color" content="#0f0a1e">
-<title>النوتة روحية — خدمة إعدادي</title>
+<title>النوتة الروحية — خدمة إعدادي</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
@@ -177,7 +177,7 @@
         <div class="check-circle">✓</div>
         <span class="activity-icon">🎮</span>
         <div class="activity-name">كاهوت</div>
-        <div class="activity-sub">حل مسابقة كاهوت</div>
+        <div class="activity-sub">عمل الكاهوت</div>
       </div>
 
       <div class="activity-card" onclick="toggleActivity(this,'الكتاب المقدس')">
@@ -201,7 +201,7 @@
 <div class="toast" id="toast"></div>
 
 <script>
-const SHEET_URL='https://script.google.com/macros/s/AKfycbxcDJmbT_vVwzbmGh1utchtFdp9nkphXpFV8xva9YEze5K_2zzkjb8bHs7fWBX67CE/exec';
+const SHEET_URL='https://script.google.com/macros/s/AKfycbw-KJcib5fecxY4AQWq8Ci0vrEANXJ4f9QaWdjE0e_8Oe5waEzVHD_9cDum2MDpAKxu/exec';
 
 const MEMBERS=[
   {name:'اندريا ملاك',grade:'أولى اعدادي'},{name:'ايلي جورج',grade:'أولى اعدادي'},
@@ -320,6 +320,7 @@ function saveEntry(){
     day:TODAY_DAY,
     activities:[...doneActivities].join('|'),
     kahoot:doneActivities.has('كاهوت')?'1':'0',
+    bible:doneActivities.has('الكتاب المقدس')?'1':'0',
     notes:document.getElementById('notesInput').value.trim(),
     cb:'cb_'+Date.now()
   });

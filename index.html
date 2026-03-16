@@ -16,10 +16,13 @@
   .app{background:linear-gradient(160deg,#0f0a1e 0%,#1a0f2e 50%,#0d1a2e 100%);min-height:100vh;padding:20px 16px 40px}
   .stars{position:fixed;top:0;left:0;right:0;bottom:0;background-image:radial-gradient(1px 1px at 20% 15%,rgba(255,255,255,.6) 0%,transparent 100%),radial-gradient(1px 1px at 60% 30%,rgba(255,255,255,.4) 0%,transparent 100%),radial-gradient(1px 1px at 80% 10%,rgba(255,255,255,.5) 0%,transparent 100%),radial-gradient(1px 1px at 35% 55%,rgba(255,255,255,.3) 0%,transparent 100%),radial-gradient(1px 1px at 75% 75%,rgba(255,255,255,.4) 0%,transparent 100%);pointer-events:none;z-index:0}
   .content{position:relative;z-index:1;max-width:600px;margin:0 auto}
+
   .header{text-align:center;margin-bottom:22px;padding:22px 20px 18px;background:linear-gradient(180deg,rgba(201,168,76,.08) 0%,transparent 100%);border-radius:20px;border:1px solid var(--border)}
   .cross-icon{font-size:26px;color:var(--gold);margin-bottom:6px;display:block}
   .header h1{font-family:'Amiri',serif;font-size:28px;color:var(--gold);margin-bottom:4px;text-shadow:0 0 20px rgba(201,168,76,.4);letter-spacing:1px}
   .header p{color:rgba(201,168,76,.55);font-size:13px}
+
+  /* Search */
   .search-section{background:var(--card-bg);border:1px solid var(--border);border-radius:16px;padding:16px;margin-bottom:14px}
   .search-label{color:var(--gold);font-size:13px;margin-bottom:8px;display:block}
   .search-wrapper{display:flex;gap:8px}
@@ -27,33 +30,34 @@
   .search-input::placeholder{color:rgba(255,255,255,.3)}
   .search-input:focus{border-color:var(--gold)}
   .search-btn{background:linear-gradient(135deg,var(--gold) 0%,var(--gold-dark) 100%);border:none;border-radius:12px;padding:12px 18px;color:#1a0f2e;font-weight:700;font-family:'Tajawal',sans-serif;font-size:14px;cursor:pointer}
-  .suggestions{margin-top:8px;background:#160e28;border:1px solid var(--border);border-radius:12px;overflow:hidden;display:none;max-height:220px;overflow-y:auto;-webkit-overflow-scrolling:touch}
+  .suggestions{margin-top:8px;background:#160e28;border:1px solid var(--border);border-radius:12px;overflow:hidden;display:none;max-height:240px;overflow-y:auto;-webkit-overflow-scrolling:touch}
   .suggestions.show{display:block}
   .suggestion-item{padding:12px 14px;color:rgba(255,255,255,.85);font-size:15px;cursor:pointer;display:flex;align-items:center;gap:10px;border-bottom:1px solid rgba(201,168,76,.1)}
   .suggestion-item:last-child{border-bottom:none}
   .suggestion-item:active{background:rgba(201,168,76,.12)}
   .suggestion-avatar{width:32px;height:32px;background:linear-gradient(135deg,var(--gold) 0%,var(--gold-dark) 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#1a0f2e;flex-shrink:0}
   .no-result{padding:14px;color:rgba(255,255,255,.3);font-size:14px;text-align:center}
+
+  /* Person banner */
   .person-banner{background:linear-gradient(135deg,rgba(201,168,76,.12) 0%,rgba(201,168,76,.04) 100%);border:1px solid var(--gold);border-radius:16px;padding:14px 16px;display:none;align-items:center;gap:12px;margin-bottom:14px}
   .person-banner.show{display:flex}
   .person-avatar-large{width:46px;height:46px;background:linear-gradient(135deg,var(--gold) 0%,var(--gold-dark) 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:700;color:#1a0f2e;flex-shrink:0}
   .person-info h3{color:var(--gold);font-size:16px}
   .person-info p{color:rgba(255,255,255,.4);font-size:12px;margin-top:2px}
   .change-btn{margin-right:auto;background:transparent;border:1px solid rgba(201,168,76,.4);border-radius:8px;padding:6px 14px;color:var(--gold);font-family:'Tajawal',sans-serif;font-size:13px;cursor:pointer}
-  .date-row{display:flex;gap:10px;margin-bottom:16px}
-  .date-display-card{flex:1;background:var(--card-bg);border:1px solid var(--border);border-radius:14px;padding:14px 10px;text-align:center}
+
+  /* Date row */
+  .date-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px}
+  .date-display-card{background:var(--card-bg);border:1px solid var(--border);border-radius:14px;padding:14px 10px;text-align:center}
   .date-display-card label{display:block;color:rgba(201,168,76,.6);font-size:11px;margin-bottom:6px}
-  .date-display-card .date-val{color:#fff;font-family:'Tajawal',sans-serif;font-size:14px;font-weight:500}
-  .kahoot-card{flex:1;background:var(--card-bg);border:1px solid var(--border);border-radius:14px;padding:12px 10px;text-align:center;cursor:pointer;transition:all .2s;position:relative}
-  .kahoot-card.done{border-color:#46D160;background:rgba(70,209,96,.08)}
-  .kahoot-card label{display:block;color:rgba(201,168,76,.6);font-size:11px;margin-bottom:4px;cursor:pointer}
-  .kahoot-card.done label{color:#46D160}
-  .kahoot-icon{font-size:22px;display:block}
-  .kahoot-check{position:absolute;top:8px;left:8px;width:18px;height:18px;border-radius:50%;border:1.5px solid rgba(70,209,96,.4);display:flex;align-items:center;justify-content:center;font-size:10px;color:transparent;transition:all .2s}
-  .kahoot-card.done .kahoot-check{background:#46D160;border-color:#46D160;color:#fff}
+  .date-display-card .date-val{color:#fff;font-size:14px;font-weight:500}
+
+  /* Section title */
   .section-title{color:var(--gold);font-family:'Amiri',serif;font-size:16px;margin-bottom:12px;display:flex;align-items:center;gap:8px}
   .section-title::before{content:'';flex:1;height:1px;background:linear-gradient(270deg,transparent,rgba(201,168,76,.4))}
   .section-title::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,76,.4))}
+
+  /* Activities grid — all 8 cards same style */
   .activities-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px}
   .activity-card{background:var(--card-bg);border:1px solid var(--border);border-radius:14px;padding:14px 12px;cursor:pointer;transition:all .2s;position:relative;user-select:none}
   .activity-card:active{transform:scale(.97)}
@@ -64,14 +68,19 @@
   .activity-card.done .activity-sub{color:var(--gold)}
   .check-circle{position:absolute;top:10px;left:10px;width:20px;height:20px;border-radius:50%;border:1.5px solid rgba(201,168,76,.4);display:flex;align-items:center;justify-content:center;font-size:11px;color:transparent;transition:all .2s}
   .activity-card.done .check-circle{background:var(--gold);border-color:var(--gold);color:#1a0f2e}
+
+  /* Notes */
   .notes-area{background:var(--card-bg);border:1px solid var(--border);border-radius:14px;padding:14px;margin-bottom:16px}
   .notes-textarea{width:100%;background:transparent;border:none;color:rgba(255,255,255,.8);font-family:'Tajawal',sans-serif;font-size:15px;resize:none;outline:none;direction:rtl;line-height:1.8;min-height:80px;-webkit-appearance:none}
   .notes-textarea::placeholder{color:rgba(255,255,255,.2)}
+
+  /* Save */
   .save-btn{width:100%;background:linear-gradient(135deg,var(--gold) 0%,var(--gold-dark) 100%);border:none;border-radius:16px;padding:17px;color:#1a0f2e;font-family:'Amiri',serif;font-size:19px;font-weight:700;cursor:pointer;transition:opacity .2s,transform .1s;letter-spacing:1px;-webkit-appearance:none}
   .save-btn:active{transform:scale(.98);opacity:.9}
   .save-btn:disabled{opacity:.6}
   .spinner{display:inline-block;width:16px;height:16px;border:2px solid rgba(26,15,46,.3);border-top-color:#1a0f2e;border-radius:50%;animation:spin .7s linear infinite;vertical-align:middle;margin-left:8px}
   @keyframes spin{to{transform:rotate(360deg)}}
+
   .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(120px);font-family:'Tajawal',sans-serif;font-weight:700;padding:13px 26px;border-radius:50px;font-size:15px;transition:transform .35s cubic-bezier(.175,.885,.32,1.275);z-index:9999;white-space:nowrap;box-shadow:0 4px 20px rgba(0,0,0,.4)}
   .toast.show{transform:translateX(-50%) translateY(0)}
   .toast.success{background:var(--gold);color:#1a0f2e}
@@ -82,11 +91,13 @@
 <div class="stars"></div>
 <div class="app">
   <div class="content">
+
     <div class="header">
       <span class="cross-icon">✝</span>
       <h1>نوتة روحية</h1>
       <p>خدمة إعدادي</p>
     </div>
+
     <div class="search-section">
       <span class="search-label">🔍 ابحث باسمك</span>
       <div class="search-wrapper">
@@ -95,6 +106,7 @@
       </div>
       <div class="suggestions" id="suggestions"></div>
     </div>
+
     <div class="person-banner" id="personBanner">
       <div class="person-avatar-large" id="personAvatarLarge"></div>
       <div class="person-info">
@@ -103,6 +115,7 @@
       </div>
       <button class="change-btn" onclick="clearPerson()">تغيير</button>
     </div>
+
     <div class="date-row">
       <div class="date-display-card">
         <label>📅 التاريخ</label>
@@ -112,49 +125,84 @@
         <label>📆 اليوم</label>
         <div class="date-val" id="displayDay"></div>
       </div>
-      <div class="kahoot-card" id="kahootCard" onclick="toggleKahoot()">
-        <div class="kahoot-check">✓</div>
-        <label>🎮 كاهوت</label>
-        <span class="kahoot-icon">🎯</span>
-      </div>
     </div>
+
     <div class="section-title">النشاطات الروحية</div>
     <div class="activities-grid">
-      <div class="activity-card" id="act-باكر" onclick="toggleActivity(this,'باكر')">
-        <div class="check-circle">✓</div><span class="activity-icon">🌅</span>
-        <div class="activity-name">باكر</div><div class="activity-sub">صلاة باكر</div>
+
+      <div class="activity-card" onclick="toggleActivity(this,'باكر')">
+        <div class="check-circle">✓</div>
+        <span class="activity-icon">🌅</span>
+        <div class="activity-name">باكر</div>
+        <div class="activity-sub">صلاة باكر</div>
       </div>
-      <div class="activity-card" id="act-نوم" onclick="toggleActivity(this,'نوم')">
-        <div class="check-circle">✓</div><span class="activity-icon">🌙</span>
-        <div class="activity-name">نوم</div><div class="activity-sub">صلاة النوم</div>
+
+      <div class="activity-card" onclick="toggleActivity(this,'نوم')">
+        <div class="check-circle">✓</div>
+        <span class="activity-icon">🌙</span>
+        <div class="activity-name">نوم</div>
+        <div class="activity-sub">صلاة النوم</div>
       </div>
-      <div class="activity-card" id="act-صوم" onclick="toggleActivity(this,'صوم')">
-        <div class="check-circle">✓</div><span class="activity-icon">🕊️</span>
-        <div class="activity-name">صوم</div><div class="activity-sub"> الصوم المقدس</div>
+
+      <div class="activity-card" onclick="toggleActivity(this,'صوم')">
+        <div class="check-circle">✓</div>
+        <span class="activity-icon">🕊️</span>
+        <div class="activity-name">صوم</div>
+        <div class="activity-sub">الصوم المقدس</div>
       </div>
-      <div class="activity-card" id="act-اعتراف" onclick="toggleActivity(this,'اعتراف')">
-        <div class="check-circle">✓</div><span class="activity-icon">🙏</span>
-        <div class="activity-name">اعتراف</div><div class="activity-sub">سر الاعتراف </div>
+
+      <div class="activity-card" onclick="toggleActivity(this,'اعتراف')">
+        <div class="check-circle">✓</div>
+        <span class="activity-icon">🙏</span>
+        <div class="activity-name">اعتراف</div>
+        <div class="activity-sub">سر الاعتراف</div>
       </div>
-      <div class="activity-card" id="act-قداس" onclick="toggleActivity(this,'قداس')">
-        <div class="check-circle">✓</div><span class="activity-icon">⛪</span>
-        <div class="activity-name">قداس</div><div class="activity-sub">حضور القداس</div>
+
+      <div class="activity-card" onclick="toggleActivity(this,'قداس')">
+        <div class="check-circle">✓</div>
+        <span class="activity-icon">⛪</span>
+        <div class="activity-name">قداس</div>
+        <div class="activity-sub">حضور القداس</div>
       </div>
-      <div class="activity-card" id="act-مدارس" onclick="toggleActivity(this,'مدارس الأحد')">
-        <div class="check-circle">✓</div><span class="activity-icon">📖</span>
-        <div class="activity-name">مدارس الأحد</div><div class="activity-sub">حضور مدارس الأحد</div>
+
+      <div class="activity-card" onclick="toggleActivity(this,'مدارس الأحد')">
+        <div class="check-circle">✓</div>
+        <span class="activity-icon">✝️</span>
+        <div class="activity-name">مدارس الأحد</div>
+        <div class="activity-sub">حضور مدارس الأحد</div>
       </div>
+
+      <!-- كاهوت والكتاب المقدس جنب بعض -->
+      <div class="activity-card" onclick="toggleActivity(this,'كاهوت')">
+        <div class="check-circle">✓</div>
+        <span class="activity-icon">🎮</span>
+        <div class="activity-name">كاهوت</div>
+        <div class="activity-sub">حل مسابقة كاهوت</div>
+      </div>
+
+      <div class="activity-card" onclick="toggleActivity(this,'الكتاب المقدس')">
+        <div class="check-circle">✓</div>
+        <span class="activity-icon">📖</span>
+        <div class="activity-name">الكتاب المقدس</div>
+        <div class="activity-sub">قراءة الكتاب المقدس</div>
+      </div>
+
     </div>
+
     <div class="notes-area">
       <div class="section-title" style="margin-bottom:10px">ملاحظات روحية</div>
       <textarea class="notes-textarea" id="notesInput" placeholder="اكتب ملاحظاتك الروحية هنا..." rows="3"></textarea>
     </div>
+
     <button class="save-btn" id="saveBtn" onclick="saveEntry()">＋ حفظ النوتة</button>
+
   </div>
 </div>
 <div class="toast" id="toast"></div>
+
 <script>
 const SHEET_URL='https://script.google.com/macros/s/AKfycbxcDJmbT_vVwzbmGh1utchtFdp9nkphXpFV8xva9YEze5K_2zzkjb8bHs7fWBX67CE/exec';
+
 const MEMBERS=[
   {name:'اندريا ملاك',grade:'أولى اعدادي'},{name:'ايلي جورج',grade:'أولى اعدادي'},
   {name:'بيرلا سامح',grade:'أولى اعدادي'},{name:'ترينيتي يوسف',grade:'أولى اعدادي'},
@@ -191,6 +239,7 @@ const MEMBERS=[
   {name:'ديفيد جوزيف',grade:'ثالثة اعدادي'},{name:'مايا ايمن',grade:'ثالثة اعدادي'},
   {name:'مجدي توني',grade:'ثالثة اعدادي'},{name:'مينا كريم',grade:'ثالثة اعدادي'},
 ];
+
 const DAY_NAMES=['الأحد','الاثنين','الثلاثاء','الأربعاء','الخميس','الجمعة','السبت'];
 const MONTH_NAMES=['يناير','فبراير','مارس','أبريل','مايو','يونيو','يوليو','أغسطس','سبتمبر','أكتوبر','نوفمبر','ديسمبر'];
 const NOW=new Date();
@@ -200,9 +249,12 @@ const TODAY_DISP=NOW.getDate()+' '+MONTH_NAMES[NOW.getMonth()]+' '+NOW.getFullYe
 document.getElementById('displayDate').textContent=TODAY_DISP;
 document.getElementById('displayDay').textContent=TODAY_DAY;
 
+// Duplicate prevention — localStorage per day
+const DUP_KEY='submitted_'+TODAY_ISO;
+const submittedToday=new Set(JSON.parse(localStorage.getItem(DUP_KEY)||'[]'));
+
 let selectedPerson=null;
 const doneActivities=new Set();
-let kahootDone=false;
 let isSaving=false;
 
 function getInitials(n){const p=n.trim().split(' ');return(p[0][0]+(p[1]?p[1][0]:'')).toUpperCase()}
@@ -211,13 +263,14 @@ function handleSearch(val){
   const q=val.trim(),box=document.getElementById('suggestions');
   if(!q){box.classList.remove('show');return}
   const matches=MEMBERS.filter(m=>m.name.includes(q)).slice(0,8);
-  if(!matches.length){box.innerHTML='<div class="no-result">لا يوجد نتائج</div>';box.classList.add('show');return}
+  if(!matches.length){box.innerHTML='<div class="no-result">الاسم مش موجود في القايمة</div>';box.classList.add('show');return}
   box.innerHTML=matches.map(m=>`<div class="suggestion-item" onclick="selectPerson('${m.name}')"><div class="suggestion-avatar">${getInitials(m.name)}</div><div><div style="font-weight:500">${m.name}</div><div style="font-size:12px;color:rgba(255,255,255,.4)">${m.grade}</div></div></div>`).join('');
   box.classList.add('show');
 }
 
 function selectPerson(name){
   const p=MEMBERS.find(m=>m.name===name);
+  if(!p)return;
   selectedPerson=p;
   document.getElementById('searchInput').value='';
   document.getElementById('suggestions').classList.remove('show');
@@ -238,80 +291,67 @@ function clearSearch(){
   document.getElementById('suggestions').classList.remove('show');
 }
 
-function toggleKahoot(){
-  kahootDone=!kahootDone;
-  document.getElementById('kahootCard').classList.toggle('done',kahootDone);
-}
-
 function toggleActivity(card,name){
-  // prevent double-toggle on fast taps
-  if(card.dataset.locked==='1') return;
+  if(card.dataset.locked==='1')return;
   card.dataset.locked='1';
-  setTimeout(()=>{ card.dataset.locked=''; },300);
+  setTimeout(()=>{card.dataset.locked=''},300);
   if(doneActivities.has(name)){doneActivities.delete(name);card.classList.remove('done')}
   else{doneActivities.add(name);card.classList.add('done')}
 }
 
 function saveEntry(){
-  if(isSaving) return;
+  if(isSaving)return;
   if(!selectedPerson){showToast('⚠️ اختار اسمك الأول!','error');return}
-  if(!doneActivities.size&&!kahootDone){showToast('✝ اختار نشاط واحد على الأقل','error');return}
+  if(!doneActivities.size){showToast('✝ اختار نشاط واحد على الأقل','error');return}
+
+  // Duplicate check
+  const dupKey=selectedPerson.name+'__'+TODAY_ISO;
+  if(submittedToday.has(dupKey)){showToast('✝ سجّلت نوتتك النهارده بالفعل!','error');return}
 
   isSaving=true;
   const btn=document.getElementById('saveBtn');
   btn.disabled=true;
   btn.innerHTML='جاري الحفظ... <span class="spinner"></span>';
 
-  const acts=[...doneActivities];
   const params=new URLSearchParams({
-    name:      selectedPerson.name,
-    grade:     selectedPerson.grade,
-    date:      TODAY_ISO,
-    day:       TODAY_DAY,
-    activities:acts.join('|'),
-    kahoot:    kahootDone?'1':'0',
-    notes:     document.getElementById('notesInput').value.trim(),
-    cb:        'cb_'+Date.now()
+    name:selectedPerson.name,
+    grade:selectedPerson.grade,
+    date:TODAY_ISO,
+    day:TODAY_DAY,
+    activities:[...doneActivities].join('|'),
+    kahoot:doneActivities.has('كاهوت')?'1':'0',
+    notes:document.getElementById('notesInput').value.trim(),
+    cb:'cb_'+Date.now()
   });
 
   const cbName=params.get('cb');
-  const timeout=setTimeout(()=>{
-    // timeout — still show success since no-cors means we can't confirm
-    cleanup();
-    resetForm();
-    showToast('✓ تم الإرسال!','success');
-  },6000);
 
-  window[cbName]=function(){
-    clearTimeout(timeout);
-    cleanup();
+  function onSuccess(){
+    submittedToday.add(dupKey);
+    localStorage.setItem(DUP_KEY,JSON.stringify([...submittedToday]));
     resetForm();
     showToast('✓ تم الحفظ في Google Sheet!','success');
-  };
+  }
+
+  const timeout=setTimeout(()=>{cleanup();onSuccess()},6000);
+
+  window[cbName]=function(){clearTimeout(timeout);cleanup();onSuccess()};
 
   function cleanup(){
-    isSaving=false;
-    btn.disabled=false;
+    isSaving=false;btn.disabled=false;
     btn.innerHTML='＋ حفظ النوتة';
     delete window[cbName];
   }
 
   const s=document.createElement('script');
   s.src=SHEET_URL+'?'+params.toString();
-  s.onerror=function(){
-    clearTimeout(timeout);
-    cleanup();
-    resetForm();
-    showToast('✓ تم الإرسال!','success');
-  };
+  s.onerror=function(){clearTimeout(timeout);cleanup();onSuccess()};
   document.body.appendChild(s);
   setTimeout(()=>{if(s.parentNode)s.parentNode.removeChild(s)},8000);
 }
 
 function resetForm(){
   doneActivities.clear();
-  kahootDone=false;
-  document.getElementById('kahootCard').classList.remove('done');
   document.querySelectorAll('.activity-card').forEach(c=>{c.classList.remove('done');c.dataset.locked=''});
   document.getElementById('notesInput').value='';
   clearPerson();
